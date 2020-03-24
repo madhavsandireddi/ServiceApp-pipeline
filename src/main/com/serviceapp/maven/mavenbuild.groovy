@@ -1,4 +1,4 @@
-package src.main.comserviceapp.maven
+package src.main.com.serviceapp.maven
 
 def createBuild(POM_PATH, MAVEN_VERSION, MVN_GOALS){
     try{
