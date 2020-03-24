@@ -13,7 +13,7 @@ def call(body)
 
     timestamps {
         def g = new git()
-        def cre = new mavenbuild()
+        def cre = new mavenBuild()
         def java = new jdk()
         def m2 = new maven()
 
@@ -47,7 +47,7 @@ def call(body)
     }
     stage ('checkout from the sourcecode git'){
     try{
-        g.gitsourcecode()
+        g.gitCheckout()
         echo "[SUCCESS] source code successfully downloade"
     }
     catch (Exception error){
