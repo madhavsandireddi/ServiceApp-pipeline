@@ -61,7 +61,7 @@ def call(body)
         try{
               def MVN_GOALS = "clean compile install"
               def POM_PATH = "${WORKSPACE}/sm-shop/pom.xml"
-              cre.createMavenBuild("${POM_PATH}", "${MAVEN_VERSION}", "${MVN_GOALS}")
+              cre.createmavenBuild("${POM_PATH}", "${MAVEN_VERSION}", "${MVN_GOALS}")
         }
         catch (Exception error){
             wrap([$class: 'AnsicolorBuildWrapper']) {
