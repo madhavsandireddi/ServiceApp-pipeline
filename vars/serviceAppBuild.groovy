@@ -3,6 +3,7 @@
 import main.com.serviceapp.build.*
 import main.com.serviceapp.tools.*
 import main.com.serviceapp.git.*
+import main.com.serviceapp.maven.*
 
 def call(body)
 {
