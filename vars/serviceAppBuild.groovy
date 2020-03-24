@@ -1,7 +1,7 @@
 #!/bin/groovy
 
 import main.com.serviceapp.build.*
-import main.com.serviceappp.tools.*
+import main.com.serviceapp.tools.*
 import main.com.serviceapp.git.*
 
 def call(body)
@@ -30,12 +30,12 @@ def call(body)
                echo "JAVA initializing failed.."
                throw error
            }
-    }    
     }
+    }    
     try{
             wrap([$class: 'AnsicolorBuildWrapper']) {
             def version = "Maven3"
-            m2.setMavenHome("${VERSION}"
+            m2.setMavenHome("${VERSION}")
             }
     }
     catch (error)
