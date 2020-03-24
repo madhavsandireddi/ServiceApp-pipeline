@@ -37,13 +37,15 @@ def call(body)
             def version = "Maven3"
             m2.setMavenHome("${VERSION}"
             }
+    }
     catch (error)
     {
             wrap([$class: 'AnsicolorBuildWrapper']){
                echo "Maven initializing failed.."
                throw error
     }
-    stage ('checkout from the sourcecode git')
+    }
+    stage ('checkout from the sourcecode git'){
     try{
         g.gitsourcecode()
         echo "[SUCCESS] source code successfully downloade"
