@@ -13,7 +13,7 @@ def call(body)
 
     timestamps {
         def g = new git()
-        def cre = new buildcompile()
+        def cre = new mavenbuild()
         def java = new jdk()
         def m2 = new maven()
 
