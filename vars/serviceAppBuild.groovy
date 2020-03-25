@@ -13,7 +13,7 @@ def call(body)
 
     timestamps {
         def g = new git()
-        def cre = new mavenBuild()
+        def cret = new mavenBuild()
         def java = new jdk()
         def m2 = new maven()
 
@@ -61,7 +61,7 @@ def call(body)
         try{
               def MVN_GOALS = "clean compile install"
               def POM_PATH = "${WORKSPACE}/sm-shop/pom.xml"
-              cre.createmavenBuild("${POM_PATH}", "${MAVEN_VERSION}", "${MVN_GOALS}")
+              cret.createmavenBuild("${POM_PATH}", "${MAVEN_VERSION}", "${MVN_GOALS}")
         }
         catch (Exception error){
             wrap([$class: 'AnsicolorBuildWrapper']) {
